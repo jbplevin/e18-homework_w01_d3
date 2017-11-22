@@ -7,26 +7,27 @@ stops = [ "Croy", "Cumbernauld", "Falkirk High", "Linlithgow", "Livingston", "Ha
 
 
 # 1. Add `"Edinburgh Waverley"` to the end of the array
-p stops << "Edinburgh Waverly"
+stops << "Edinburgh Waverly"
 # 2. Add `"Glasgow Queen St"` to the start of the array
-p stops.unshift("Glasgow Queen St")
+stops.unshift("Glasgow Queen St")
 # 3. Add `"Polmont"` at the appropriate point (between `"Falkirk High"` and `"Linlithgow"`)
-p stops.insert(4, "Polmont")
+stops.insert(4, "Polmont")
 # 4. Work out the index position of `"Linlithgow"`
-p stops.index("Linlithgow")
+stops.index("Linlithgow")
 # 5. Remove `"Livingston"` from the array using its name
-p stops.delete("Livingston")
+stops.delete("Livingston")
 # 6. Delete `"Cumbernauld"` from the array by index
-p stops.delete_at(2)
+stops.delete_at(2)
 # 7. How many stops there are in the array?
-p stops.count
+stops.count
 # 8. How many ways can we return `"Falkirk High"` from the array?
-p stops[2]
+stops[2]
 # 9. Reverse the positions of the stops in the array
-p stops.reverse
+stops.reverse
 # 10. Print out all the stops using a for loop
 for stop in stops
   p stop
+end
 ## B. Given the following data structure:
 
   users = {
@@ -62,15 +63,33 @@ for stop in stops
   }
 
 # 1. Get Jonathan's Twitter handle (i.e. the string `"jonnyt"`)
+users["Jonathan"][:twitter]
 # 2. Get Erik's hometown
+users["Erik"][:home_town]
 # 3. Get the array of Erik's favourite numbers
+users["Erik"][:favourite_numbers]
 # 4. Get the type of Avril's pet Colin
+users["Avril"][:pets]["colin"]
 # 5. Get the smallest of Erik's favourite numbers
+users["Erik"][:favourite_numbers].min
 # 6. Add the number `7` to Erik's favourite numbers
+users["Erik"][:favourite_numbers] << 7
 # 7. Change Erik's hometown to Edinburgh
+users["Erik"][:home_town] = "Edinburgh"
 # 8. Add a pet dog to Erik called "Fluffy"
+users["Erik"][:pets].store("Fluffy",:dog)
 # 9. Add yourself to the users hash
+users["Joe"] = {
+  twitter: "N/A"
+  favourite_numbers: [23,27,29]
+  home_town: "Newcastle"
+  pets: {
+    "Cedric" :hamster
+    "Percy" :guinea_pig
+    "Oswald" :dog
+  }
 
+}
 # C. Given the following data structure:
 
 
@@ -95,4 +114,3 @@ united_kingdom = [
 # 2. Create a Hash for Northern Ireland and add it to the `united_kingdom` array (The capital is Belfast, and the population is 1,811,000).
 # 3. Use a loop to print the names of all the countries in the UK.
 # 4. Use a loop to find the total population of the UK.
-end
