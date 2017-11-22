@@ -79,17 +79,17 @@ users["Erik"][:home_town] = "Edinburgh"
 # 8. Add a pet dog to Erik called "Fluffy"
 users["Erik"][:pets].store("Fluffy",:dog)
 # 9. Add yourself to the users hash
-users["Joe"] = {
-  twitter: "N/A"
-  favourite_numbers: [23,27,29]
-  home_town: "Newcastle"
+ users["Joe"] = {
+  twitter: "N/A",
+  favourite_numbers: [23,27,29],
+  home_town: "Newcastle",
   pets: {
-    "Cedric" :hamster
-    "Percy" :guinea_pig
-    "Oswald" :dog
-  }
-
+    hamster: "Cedric",
+    guinea_pig: "Percy",
+    dog: "Oswald"
+    }
 }
+
 # C. Given the following data structure:
 
 
